@@ -8,47 +8,9 @@
     </head>
     
     <body>
-        <iframe src=https://docs.google.com/spreadsheets/d/1VC50K3svQa7I_0dTeMX8mVryd9eWrgc-9IfCTsl0szE/edit?usp=sharingid=74e8bb60ad4e38d6a1b0dc865d7197ff width='1300' height='1300' frameborder='1000' style='background:#F5F3F5;padding:20px;'></iframe>
+        <iframe src=https://docs.google.com/spreadsheets/d/1VC50K3svQa7I_0dTeMX8mVryd9eWrgc-9IfCTsl0szE/edit?usp=sharingid=74e8bb60ad4e38d6a1b0dc865d7197ff width='500' height='500' frameborder='1000' style='background:#F5F3F5;padding:20px;'></iframe>
+        
+        
     </body>
-    <script type="text/javascript" id="WolframAlphaScript74e8bb60ad4e38d6a1b0dc865d7197ff" src="//www.wolframalpha.com/widget/widget.jsp?id=74e8bb60ad4e38d6a1b0dc865d7197ff"></script>
-      <script type="text/javascript" src="/data/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="/data/js/jquery.history.js"></script>
-<script type="text/javascript" src="/data/js/jquery.tablesorter.js"></script>
-<script type="text/javascript">
-/*<![CDATA[*/
-jQuery(function($) {
-jQuery('body').on('click','#calculate',function(){jQuery.ajax({'dataType':'html','type':'POST','success':function(data) {
-                        var html = $(data);
-                        var hadresult = html.find("#hadresult").contents();
-                        var otherodds = html.find("#otherodds").contents();
-                        var overunder = html.find("#overunder").contents();
-                        var cscores = html.find("#cscores").contents();
-                        if (data.indexOf("success") > -1) {
-                          $("#poissonresult").html(hadresult);
-                          $("#otherodds").html(otherodds);
-                          $("#cscores").html(cscores);
-                        }
-                         else{
-                          $.each(JSON.parse(data), function(key, val) {
-                          $("#poisson-form #"+key+"_em_").text(val);                                                    
-                          $("#poisson-form #"+key+"_em_").show();
-                        });
-                       }       
-                    },'url':'/data/tools/poisson?render=1','cache':false,'data':jQuery(this).parents("form").serialize()});return false;});
-jQuery('#poisson-form').yiiactiveform({'attributes':[{'id':'PoissonForm_homeGoalExp','inputID':'PoissonForm_homeGoalExp','errorID':'PoissonForm_homeGoalExp_em_','model':'PoissonForm','name':'homeGoalExp','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
-
-if(jQuery.trim(value)=='') {
-	messages.push("Home Goal Expectancy cannot be blank.");
-}
-
-}},{'id':'PoissonForm_awayGoalExp','inputID':'PoissonForm_awayGoalExp','errorID':'PoissonForm_awayGoalExp_em_','model':'PoissonForm','name':'awayGoalExp','enableAjaxValidation':true,'clientValidation':function(value, messages, attribute) {
-
-if(jQuery.trim(value)=='') {
-	messages.push("Away Goal Expectancy cannot be blank.");
-}
-
-}}],'errorCss':'error'});
-});
-/*]]>*/
-</script>
+   <script type="text/javascript" id="WolframAlphaScript74e8bb60ad4e38d6a1b0dc865d7197ff" src="//www.wolframalpha.com/widget/widget.jsp?id=74e8bb60ad4e38d6a1b0dc865d7197ff"></script>
 </html>
