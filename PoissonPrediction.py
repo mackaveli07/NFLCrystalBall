@@ -1,8 +1,8 @@
 from scipy.stats import poisson
 import seaborn as sb
 
-HomeExpectedTD = input("Enter the expected amount of TDs that the home team will score")
-AwayExpectedTD = input("Enter the expected amount of TDs that the away team will score")
+HomeexpectedTD = input("Enter the expected amount of TDs that the home team will score")
+AwayxpectedTD = input("Enter the expected amount of TDs that the away team will score")
 
 data_binom = poisson.rvs(mu=HomeexpectedTD, size=10000)
 ax = sb.distplot(data_binom,
