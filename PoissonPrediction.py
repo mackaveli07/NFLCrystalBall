@@ -1,26 +1,23 @@
 from scipy.stats import poisson
-import seaborn as sb
+import matplotlib.pyplot as plt
 
+plt.ylabel('Probabilty')
+plt.xlabel('Number of TD')
+plt.title('Probability of # of TDs')
+arr = []
+arr2= []
+HomeExpectedTD = int(input("What is the expected TD for the home team:"))
+AwayExpectedTD = int(input("What is the expected TD for the away team:"))
+rv = poisson(HomeExpectedTD)
+rv2 = poisson(AwayExpectedTD)
+for num in range(0, 5):
+    arr.append(rv.pmf(num))
+    arr2.append(rv2.pmf(num))
 
-HomeExpectedTD = input("Enter the expected amount of TDs that the home team will score")
-AwayExpectedTD = input("Enter the expected amount of TDs that the away team will score")
-
-data_binom = poisson.rvs(mu=HomeExpectedTD, size=10000)
-ax = sb.distplot(data_binom,
-                  kde=True,
-                  color='green',
-                  hist_kws={"linewidth": 25,'alpha':1})
-ax.set(xlabel='TDs', ylabel='Probability')
-
-
-
-data_binom2 = poisson.rvs(mu=AwayExpectedTD, size=10000)
-
-ax = sb.distplot(data_binom,
-                  kde=True,
-                  color='green',
-                  hist_kws={"linewidth": 25,'alpha':1})
-
-ax.set(xlabel='TDs', ylabel='Probability')
-
-
+# print(rv.pmf(28))
+prob = rv.pmf(5)
+plt.grid(True)
+plt.plot(arr, linewidth=2.0)
+plt.plot(arr2, linewidth=2.0)
+plt.plot([5], [prob], marker='o', markersize=6, color="red")
+plt.show()
